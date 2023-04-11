@@ -1,5 +1,7 @@
-title: Read The Docs Jekyll Theme
-description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
+title: Introduction to Linux Scripting
+description: An guide that highlights the core use cases of Linux scripting using bash
+baseurl: /docs
+url: https://linux-scripting.crollins.io
 
 # Development server config, needed to load some of the content
 webrick:
@@ -7,9 +9,9 @@ webrick:
     Access-Control-Allow-Origin: "*"
 
 # Theme settings
-site_author: Carlos Pereira Atencio
-repo_url: 'https://github.com/carlosperate/jekyll-theme-rtd'
-edit_on_github: true
+site_author: Caleb Rollins
+repo_url: 'https://github.com/crollins18/intro-linux-scripting'
+edit_on_github: false
 github_docs_folder: false
 sticky_navigation: true
 prev_next_buttons_location: both
