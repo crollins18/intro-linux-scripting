@@ -9,7 +9,6 @@ webrick:
     Access-Control-Allow-Origin: "*"
 
 # Theme settings
-site_author: Caleb Rollins
 repo_url: 'https://github.com/crollins18/intro-linux-scripting'
 edit_on_github: false
 github_docs_folder: false
