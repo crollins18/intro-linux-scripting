@@ -1,12 +1,6 @@
 title: Introduction to Linux Scripting
 description: An guide that highlights the core use cases of Linux scripting using bash
-baseurl: /docs
-url: https://linux-scripting.crollins.io
-
-# Development server config, needed to load some of the content
-webrick:
-  headers:
-    Access-Control-Allow-Origin: "*"
+remote_theme: carlosperate/jekyll-theme-rtd
 
 # Theme settings
 repo_url: 'https://github.com/crollins18/intro-linux-scripting'
