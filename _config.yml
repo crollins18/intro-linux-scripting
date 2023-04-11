@@ -1,18 +1,31 @@
 title: Introduction to Linux Scripting
 description: An guide that highlights the core use cases of Linux scripting using bash
-baseurl: /docs
-url: https://linux-scripting.crollins.io
 
-# Development server config, needed to load some of the content
-webrick:
-  headers:
-    Access-Control-Allow-Origin: "*"
+theme: null
 
-# Theme settings
-repo_url: 'https://github.com/crollins18/intro-linux-scripting'
-edit_on_github: false
-github_docs_folder: false
-sticky_navigation: true
-prev_next_buttons_location: both
-search_enabled: true
-hljs_style: github-gist
+# debug:
+#   compress: true
+#   dist: false
+#   shortcodes: true
+
+readme_index:
+  with_frontmatter: true
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+
+exclude:
+  - Makefile
+  - CNAME
+  - LICENSE
+  - update.sh
+  - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - jekyll-rtd-theme.gemspec
