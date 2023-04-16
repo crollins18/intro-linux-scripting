@@ -1,4 +1,5 @@
 ## Module 2 - Text Parsing and Manipulation
+Written by: Caleb Rollins
 
 One core use case of bash scripting deals with reading and writing to special types of variables called strings. Strings are simply a collection or arrangement of characters with some type of meaning to the programmer depending on the task at hand. Let's first look at how we create strings inside of the bash environment.
 
@@ -20,7 +21,7 @@ $str
 ### Concatenating Strings
 Now that we know how to create strings, what do we do if we want to join two strings together? Imagine you are creating a program to greet the user using a workplace computer. Although you could create a separate string variable for each user that could possibly login to the system, this would be inefficient and a real hassle for a large organization that has hundreds of users. 
 
-Instead you could use concatenate (fancy word for join) two string variables together. Earlier in Module 1 concatenating was employed, but we did some magic hand waving. We could create a variable for the message called  `msg` with the value `Welcome and enjoy your time, `and another variable that would be appended to the message such as the username. In bash, many prefilled variables [already exist for your use](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux#common-environmental-and-shell-variables) (see resource for more information) and we already saw the use of one of these special variables in Module 1 called `$HOME`.We will utilize another variable called `$USER`.
+Instead you could use concatenate (fancy word for join) two string variables together. Earlier in Module 1 concatenating was employed, but we did some magic hand waving. We could create a variable for the message called  `msg` with the value `Welcome and enjoy your time, `and another variable that would be appended to the message such as the username. In bash, many prefilled variables [already exist for your use](https://opensource.com/article/19/8/what-are-environment-variables) (see resource for more information) and we already saw the use of one of these special variables in Module 1 called `$HOME`.We will utilize another variable called `$USER`.
 
 ```note
 For now, don’t worry about how this variable is set, but just know that it has the current user’s username and can be treated just like any string variable you have created earlier. 
