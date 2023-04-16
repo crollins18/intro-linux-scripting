@@ -1,4 +1,5 @@
 ## Module 0 - Getting Started
+Written by: Trey Parker
 
 ### Glossary of Basic Commands
 

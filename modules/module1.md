@@ -1,4 +1,5 @@
 ## Module 1 - Workflow Automation and Productivity
+Written by: Jason Wong
 
 One of the most prominent use cases of bash scripting is the ability to wrap several commands into one script. **After all, command-line bash is the same thing as scripting bash. Virtually anything you can do via the bash terminal can be done in a bash script.** For example, if you are working in Java on the command line, the compile and run commands can be added to a script so the program can be compiled and run in a single command. This module will cover how to convert a command-line workflow into a script and explain some of bash’s basic syntax.
 
@@ -89,6 +90,7 @@ else
 	<other commands>
 fi
 ```
+An easy way to understand if statements is that they take the form of “if <condition> is true, do these commands.” Else-if statements mean “if <condition> is true, do these statements, otherwise, check if <other condition> is true and do those statements.” Else statements mean that “if <condition> is true, do these commands, but if it is not true, do these other commands.”
 
 ```danger
 ```
