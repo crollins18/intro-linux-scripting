@@ -191,7 +191,63 @@ ssh hostname@remote
 done
 ```
 
-Additional examples of while loops can be found on The Linux Documentation Project’s [website](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html). This resource shows several examples of where `while` loops could be used. Although the examples are more complex than what was covered in this module, they are great examples of real-world use cases of `while` loops. 
+Additional examples of while loops can be found on The Linux Documentation Project’s [website](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html). This resource shows several examples of where `while` loops could be used. Although the examples are more complex than what was covered in this module, they are great examples of real-world use cases of `while` loops.
+
+### Workflow Automation
+Workflow Automation
+Now that we’re familiar with the basic syntax of `bash`, let’s explore how it can be used to automate various tasks.
+
+#### Code Editor Launcher
+Let’s say that you’re working on a Python project stored in `$HOME/projects/python/code`. It’s a hassle to have to navigate to that directory and source the virtual environment, so you choose to write a script to accomplish that. Here’s what it might look like.
+
+```danger
+```
+
+```bash
+#!/bin/bash
+
+cd $HOME/projects/python/code # In the Variables section, we learned what the $HOME environment variable is
+
+# We learned how to use if statements with conditionals earlier in this module
+if [ $? -ne 0 ]
+then
+	echo "Directory $HOME/projects/python/code does not exist"
+else
+	echo "Successfully navigated to project!"
+fi
+
+# Remember, we can execute any bash command simply by writing it in the script. Here, we are running the source command to source the virtual environment
+source env/bin/activate
+
+# Let's spawn another terminal instance to use to run our code in without closing our editor. Replace "konsole" with the name of your preferred terminal application.
+konsole . &
+
+# Finally, let's open the code in an editor
+nano main.py
+```
+
+Now, your code is open in an editor, and you have a separate terminal window to run it in!
+
+#### Automatic GitHub Committer
+Here’s another example. Adding, committing, and pushing files to GitHub can be annoying and repetitive. Let’s make a script that takes the commit message as a command-line argument, creates a commit containing all changed files, and pushes it.
+
+```bash
+#!/bin/bash
+
+# We learned how to use the $1 variable to access the first command-line argument
+echo "Commit message: $1"
+# Use the $1 variable as the commit message
+git commit -m $1
+
+git push
+while [ $? -ne 0 ] # We learned how to repeatedly try a command until successful
+do
+	sleep 5 # Wait 5 seconds for the user to resolve the issue
+	git push
+done
+```
+
+We encourage you to try and augment this example to ask for user confirmation before pushing. Additionally, you could use arguments to pass in the files that you want to commit to experiment more with command-line arguments in bash.
 
 ### Ideas for Automation
 Possible ideas for workflows to automate include (in order of estimated complexity):
