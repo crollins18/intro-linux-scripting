@@ -2,7 +2,7 @@
 
 ### Hello and Welcome!
 
-This is website is an introduction to Linux scripting using `bash` for the instructions assignment in NCSU ENG 331. Use the navigation bar on the lefthand side of the page to start readng.
+This website is an introduction to Linux scripting using `bash` for the instructions assignment in NCSU ENG 331. Use the navigation bar on the lefthand side of the page to start readng.
 
 Students: Caleb Rollins (ccrollin@ncsu.edu), Jason Wong (jtwong@ncsu.edu), Trey Parker (ccparke4@ncsu.edu), Chima Nwosu (cgnwosu@ncsu.edu)
 
