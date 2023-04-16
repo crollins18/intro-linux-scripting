@@ -91,9 +91,15 @@ file1
 ---
 
 ### Input/Output Redirection
-When writing a script in Linux it is often nice to change the behavior of the input, output, and error locations (the terminal is the default). For example, if you wanted to save time typing out input you could change the standard input (stdin) for your script from the terminal to a file. You can also redirect output such that instead of getting the standard output (stdout) in your terminal you could redirect the output to a file. This might be preferred when writing a script to reduce the noise and text overload on the screen. With piping we can even make the output of one command an input for another command.
+```tip
+When writing a script in Linux it is often nice to change the behavior of the input, output, and error locations (the terminal is the default). For example, if you wanted to save time typing out input you could change the standard input (stdin) for your script from the terminal to a file. 
 
-> The examples below are adapted from this [resource](https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining). If you would like to try out more complex types of redirection check out that article. Do not worry about how these commands specifically work as they will be explained later. For now understand the redirections that are happening.
+You can also redirect output such that instead of getting the standard output (stdout) in your terminal you could redirect the output to a file. This might be preferred when writing a script to reduce the noise and text overload on the screen. With piping we can even make the output of one command an input for another command.
+```
+
+```warning
+The examples below are adapted from this [resource](https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining). If you would like to try out more complex types of redirection check out that article. Do not worry about how these commands specifically work as they will be explained later. For now understand the redirections that are happening.
+```
 
 #### Redirection using `>`
 `command > file` 

@@ -2,6 +2,8 @@
 
 One of the most prominent use cases of bash scripting is the ability to wrap several commands into one script. **After all, command-line bash is the same thing as scripting bash. Virtually anything you can do via the bash terminal can be done in a bash script.** For example, if you are working in Java on the command line, the compile and run commands can be added to a script so the program can be compiled and run in a single command. This module will cover how to convert a command-line workflow into a script and explain some of bash’s basic syntax.
 
+```danger
+```
 Let’s go back to the Java example for a moment. To compile and run a program called `myProgram`, the following commands could be used:
 
 ```bash
@@ -9,7 +11,9 @@ javac myProgram.java
 java myProgram
 ```
 
+```note
 __Bash scripts are essentially a collection of bash commands tied together with various control flow structures, variables, and specialized functions.__ In other words, the simplest bash script is simply a shebang (which will be covered later in the module) followed by a series of bash commands–the same exact ones that you run on the command line. So, a script to compile and run the previous Java program would look like this:
+```
 
 ```bash
 #!/bin/bash
@@ -27,10 +31,7 @@ You may have noticed the strange comment on the first line in the Java script. T
 ### Executing the Script
 After writing and saving the script, the next step is to test it out. Bash scripts kind of act like bash commands–all you need to do is type the name of the script into a bash terminal and voilà, it runs… kind of. When the filename is typed, by default, bash searches a specific set of file paths for that filename, which usually does not include the current directory. Therefore, the name of the script needs to be prefixed by a `./` to force bash to look only in the current directory for the script. Running the script using the `./` prefix should result in a permissions error. To solve this, execute the command `chmod +x myScript.sh`, replacing `myScript.sh` with the name of your script. This tells the operating system to allow users to execute `myScript.sh`.
 
-For curious users, that set of file paths where bash by default assumes executables to be stored is defined in the `$PATH` variable. More information about `$PATH` and adding file paths can be found [here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
-
-More information about the `chmod` command and its options can be found [here](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/).
-
+For curious users, that set of file paths where bash by default assumes executables to be stored is defined in the `$PATH` variable. Adding your script to `$PATH` allows you to execute it from any location on your computer. More information about `$PATH` and adding file paths can be found [here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
 
 ### Variables
 Like any good programming or scripting language, bash supports the use of variables, which greatly expands the possibilities of bash scripting. However, for users familiar with Python, Java, or C, the syntax for bash variables looks slightly different. Variables are created and assigned using the equals operator (`=`) like in the following.
@@ -49,6 +50,8 @@ There are also some special variables that can be used in a bash script. The mos
 * `$?` → Stores the exit status of the last run command within the script
 * `$HOME` → Stores the path of the user’s home directory (see Concatenating Strings example)
 
+```danger
+```
 Here is an example of how each variable might be used. Notice that each variable deals with obtaining external information, rather than information from within the script.
 
 ```bash
@@ -60,7 +63,6 @@ echo “cd resulted in $? (0 for success, 1 for failure)”
 This script simply prints out the script’s name and arguments before switching directories to the user’s downloads directory. Then, it reports if it was successful in switching directories. For now, don’t worry about the specifics of how we combine the variables with other text as this will be explored later in Module 3 - Concatenating Strings.
 
 For curious learners, a longer list of operations that can be performed on variables can be found on a tutorial site [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php).
-
 
 ### Loops and Logic
 
@@ -84,6 +86,8 @@ else
 fi
 ```
 
+```danger
+```
 In our example, we would write the following to print a user-friendly status message:
 ```bash
 if [ $? = 0 ]
@@ -111,11 +115,11 @@ In this case, we are using the `=` operator to check for equality. However, ther
 <integer1> -le <integer2> # Similar to the "<=" operator
 ```
 
-A comprehensive list can be found in the GNU bash scripting manual [here](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html).
-
-
 #### `for` Loops
 Another common programming construct is the `for` loop. These, like in other languages, are used to repeat a set of statements for a particular number of times. The basic syntax to iterate for a set number of times is as follows:
+
+```danger
+```
 
 ```bash
 # Basic syntax
@@ -153,6 +157,9 @@ For loops can be used to apply an operation to every file in a directory, attemp
 
 The last important looping structure is the `while` loop. `while` loops are used to execute a set of statements until a given condition is true. This differs from `for` loops, which are used to execute a set of statements a predetermined number of times, or for each element in a set. `while` loops are often used to retry commands until they succeed or to keep prompting a user for valid input until they enter the correct input. Like `if` statements, they use bracket notation to represent the conditional. Additionally, the same operators can be used.
 
+```danger
+```
+
 ```bash
 # Basic syntax
 while [ <condition> ]
@@ -169,7 +176,7 @@ ssh hostname@remote
 done
 ```
 
-Additional examples of while loops can be found on The Linux Documentation Project’s [website](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html).
+Additional examples of while loops can be found on The Linux Documentation Project’s [website](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html). This resource shows several examples of where `while` loops could be used. Although the examples are more complex than what was covered in this module, they are great examples of real-world use cases of `while` loops. 
 
 ### Ideas for Automation
 Possible ideas for workflows to automate include (in order of estimated complexity):
@@ -187,28 +194,24 @@ Possible ideas for workflows to automate include (in order of estimated complexi
 
 ### Diving Deeper
 
-The topics that you saw in this module are just an introduction to the syntax of bash. There are many other resources that cover the same topics in more detail. We encourage you to browse through these outside resources, especially if you feel comfortable with the topics presented in this module. Additionally, the secondary resources mentioned previously in this module are included here for convenience.
+The topics that you saw in this module are just an introduction to the syntax of bash. There are many other resources that cover the same topics in more detail. We encourage you to browse through these outside resources, especially if you feel comfortable with the topics presented in this module.
 
-
-
-* [C-style `for` loops](https://www.cyberciti.biz/faq/linux-unix-applesox-bsd-bash-cstyle-for-loop/)
-    * If you are familiar with the C programming language or its relatives, you may be more comfortable working with a C-style `for` loop. Luckily, bash has you covered.
-* [Command substitution (Bash Reference Manual)](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution)
-    * Command substitution allows you to use the output of commands in your scripts. It works by running the command and then replacing the substitution with the output of that command.
-* [Environment variables](https://opensource.com/article/19/8/what-are-environment-variables)
-    * Environment variables are variables that persist throughout the lifetime of a particular shell instance. You can think of them as global variables that live outside of any script.
-    * Normally environment variables are used to store important persistent information, like installation directories, information about the system, and more.
-    * You can also define custom environment variables to suit your needs.
-* [Adding scripts to `$PATH`](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/)
-    * The `$PATH` environment variable stores the directories that the bash interpreter looks through when a command is run.
-    * Adding your script to `$PATH` allows you to execute it from any location on your computer.
-* [Additional conditional expressions (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html)
-    * There are many different conditional expressions other than the simple equals or greater than that could be used in logic structures. In particular, there are a lot of expressions that pertain to file operations, which can be used to automate a lot of different tasks.
-
-
-### Alternative Resources for Topics Covered
-These resources contain additional examples to supplement the material from this module.
-* [More about variables](https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php)
-    * This guide contains several additional examples that may be useful to reference.
-* [More about while loops](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)
-    * This resource shows several examples of where `while` loops could be used. Although the examples are more complex than what was covered in this module, they are great examples of real-world use cases of `while` loops. 
+```warning
+[C-style `for` loops (cyberciti.biz)](https://www.cyberciti.biz/faq/linux-unix-applesox-bsd-bash-cstyle-for-loop/)
+* If you are familiar with the C programming language or its relatives, you may be more comfortable working with a C-style `for` loop. Luckily, bash has you covered.
+```
+```warning
+[What are Environment Variables (opensource.com)](https://opensource.com/article/19/8/what-are-environment-variables)
+* Environment variables are variables that persist throughout the lifetime of a particular shell instance.
+* You can think of them as global variables that live outside of any script.
+* Normally environment variables are used to store important persistent information, like installation directories, information about the system, and more.
+* You can also define custom environment variables to suit your needs.
+```
+```warning
+[Additional Conditional Expressions (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html)
+* There are many different conditional expressions other than the simple equals or greater than that could be used in logic structures. In particular, there are a lot of expressions that pertain to file operations, which can be used to automate a lot of different tasks.
+```
+```warning
+[Command Substitution (Bash Reference Manual)](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution)
+* Command substitution allows you to use the output of commands in your scripts. It works by running the command and then replacing the substitution with the output of that command.
+```

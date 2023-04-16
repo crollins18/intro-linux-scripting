@@ -1,7 +1,7 @@
 <div class="toasts warning mb-4">
     <div class="title px-2 py-1">
-        <i class="fa fa-exclamation-circle"></i>
-        {{ __.warning | default: "Warning" }}
+        <i class="fa fa-external-link"></i>
+        {{ __.warning | default: "Resource" }}
     </div>
     <div class="content px-2 py-3">
         {{ codes | markdownify | strip_newlines -}}
