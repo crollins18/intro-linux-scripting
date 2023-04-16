@@ -29,7 +29,11 @@ Of course, this script may not save that much time since the two commands are ve
 You may have noticed the strange comment on the first line in the Java script. This line, `#!/bin/bash`, is referred to as the shebang. It tells the interpreter to run that file as a bash script (as opposed to other interpreters like sh), making it an important component in every script you write. Shebangs can be used with virtually any interpreter–just specify the location of the interpreter in place of the `/bin/bash` portion of the shebang.
 
 ### Executing the Script
-After writing and saving the script, the next step is to test it out. Bash scripts kind of act like bash commands–all you need to do is type the name of the script into a bash terminal and voilà, it runs… kind of. When the filename is typed, by default, bash searches a specific set of file paths for that filename, which usually does not include the current directory. Therefore, the name of the script needs to be prefixed by a `./` to force bash to look only in the current directory for the script. Running the script using the `./` prefix should result in a permissions error. To solve this, execute the command `chmod +x myScript.sh`, replacing `myScript.sh` with the name of your script. This tells the operating system to allow users to execute `myScript.sh`.
+After writing and saving the script, the next step is to test it out. Bash scripts kind of act like bash commands–all you need to do is type the name of the script into a bash terminal and voilà, it runs… kind of. 
+
+```tip
+When the filename is typed, by default, bash searches a specific set of file paths for that filename, which usually does not include the current directory. Therefore, the name of the script needs to be prefixed by a `./` to force bash to look only in the current directory for the script. Running the script using the `./` prefix should result in a permissions error. To solve this, execute the command `chmod +x myScript.sh`, replacing `myScript.sh` with the name of your script. This tells the operating system to allow users to execute `myScript.sh`.
+```
 
 For curious users, that set of file paths where bash by default assumes executables to be stored is defined in the `$PATH` variable. Adding your script to `$PATH` allows you to execute it from any location on your computer. More information about `$PATH` and adding file paths can be found [here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
 
