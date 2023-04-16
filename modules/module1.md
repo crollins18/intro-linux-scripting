@@ -76,9 +76,18 @@ Let’s augment the previous example, which reported if a particular `cd` comman
 The basic syntax of an if statement is:
 ```bash
 # Basic if
-if [<condition>]
+if [ <condition> ]
 then 
 	<commands>
+fi
+
+# Basic if-elif
+if [ <condition> ]
+then 
+	<commands>
+elif [ <other condition> ]
+then
+	<other commands>
 fi
 
 # if-else
@@ -89,6 +98,8 @@ else
 	<other commands>
 fi
 ```
+
+An easy way to understand `if` statements is that they take the form of “if <condition> is true, do these commands.” `Else-if` statements mean “if <condition> is true, do these statements, otherwise, check if <other condition> is true and do those statements.” Else statements mean that “if <condition> is true, do these commands, but if it is not true, do these other commands.”
 
 ```danger
 ```
@@ -204,6 +215,9 @@ The topics that you saw in this module are just an introduction to the syntax of
 [C-style `for` loops (cyberciti.biz)](https://www.cyberciti.biz/faq/linux-unix-applesox-bsd-bash-cstyle-for-loop/)
 * If you are familiar with the C programming language or its relatives, you may be more comfortable working with a C-style `for` loop. Luckily, bash has you covered.
 ```
+```warning
+[Case statements](https://linuxize.com/post/bash-case-statement/)
+* Case statements are similar to a series of if statements. They check for equality against a number of cases. Then, the code in the matching case is run.
 ```warning
 [What are Environment Variables (opensource.com)](https://opensource.com/article/19/8/what-are-environment-variables)
 * Environment variables are variables that persist throughout the lifetime of a particular shell instance.
