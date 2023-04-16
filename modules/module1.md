@@ -1,10 +1,11 @@
 ## Module 1 - Workflow Automation and Productivity
 
-One of the most prominent use cases of bash scripting is the ability to wrap several commands into one script. **After all, command-line bash is the same thing as scripting bash. Virtually anything you can do via the bash terminal can be done in a bash script.** For example, if you are working in Java on the command line, the compile and run commands can be added to a script so the program can be compiled and run in a single command. This module will cover how to convert a command-line workflow into a script and explain some of bash’s basic syntax.
+One of the most prominent use cases of bash scripting is the ability to wrap several commands into one script. **After all, command-line bash is the same thing as scripting bash. Virtually anything you can do via the bash terminal can be done in a bash script.** For example, if you are working in Java on the command line, the compile and run commands can be added to a script so the program can be compiled and run in a single command. This module will explain some of `bash`’s basic syntax and cover how to convert a command-line workflow into a script.
+
 
 ```danger
 ```
-Let’s go back to the Java example for a moment. To compile and run a program called `myProgram`, the following commands could be used:
+Before diving into automation, we need to explore some of the basics of bash. Let’s go back to the Java example for a moment. To compile and run a program called `myProgram`, the following commands could be used:
 
 ```bash
 javac myProgram.java
@@ -247,7 +248,7 @@ do
 done
 ```
 
-We encourage you to try and augment this example to ask for user confirmation before pushing. Additionally, you could use arguments to pass in the files that you want to commit to experiment more with command-line arguments in bash.
+We encourage you to try and augment this example to ask for user confirmation before pushing. Additionally, you could use arguments to pass in the files that you want to commit to experiment more with command-line arguments in `bash`.
 
 ### Ideas for Automation
 Possible ideas for workflows to automate include (in order of estimated complexity):
