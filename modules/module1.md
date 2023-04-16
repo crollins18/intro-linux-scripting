@@ -100,7 +100,6 @@ else
 	<other commands>
 fi
 ```
-An easy way to understand if statements is that they take the form of “if <condition> is true, do these commands.” Else-if statements mean “if <condition> is true, do these statements, otherwise, check if <other condition> is true and do those statements.” Else statements mean that “if <condition> is true, do these commands, but if it is not true, do these other commands.”
 
 An easy way to understand `if` statements is that they take the form of “if <condition> is true, do these commands.” `Else-if` statements mean “if <condition> is true, do these statements, otherwise, check if <other condition> is true and do those statements.” Else statements mean that “if <condition> is true, do these commands, but if it is not true, do these other commands.”
 
