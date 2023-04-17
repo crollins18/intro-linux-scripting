@@ -140,4 +140,4 @@ $ command1 | command2 | command3
 ```bash
 $ echo "joe joe bob bob jane" | wc -w | grep [0-9]
 ```
-The second example sends the output of the `echo` command ("joe joe bob bob jane") to the `wc` command, which counts the number of words in the string. Then, the output of the `wc` command is sent to the `grep` command, which searches the input for numbers.
+The second example sends the output of the `echo` command (the string `"joe joe bob bob jane"`) to the `wc` command, which counts the number of words in the string. Then, the output of the `wc` command is sent to the `grep` command, which searches the input for numbers.
