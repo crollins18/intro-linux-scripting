@@ -99,7 +99,7 @@ You can also redirect output such that instead of getting the standard output (s
 ```
 
 ```warning
-The examples below are adapted from this [resource](https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining). If you would like to try out more complex types of redirection check out that article. Do not worry about how these commands specifically work as they will be explained later. For now understand the redirections that are happening.
+The examples below are adapted from this [resource](https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining). If you would like to try out more complex types of redirection check out that article. Do not worry about how these commands specifically work as they will be explained later. For now, focus on understanding the redirections that are happening.
 ```
 
 #### Redirection using `>`
@@ -112,7 +112,7 @@ writinghelloworldtofile
 ```
 
 `command &> file`
-*  sends standard output and error output to a file
+*  sends standard output and error output to `file`
 ```bash
 $ find /usr -name ls &> myfile.txt
 $ cat myfile.txt
@@ -122,7 +122,7 @@ find: '/usr/share/polkit-1/rules.d': Permission denied #standard error
 
 #### Redirection using `<`
 `command < input`
-* Feeds a command input from `input` file
+* Feeds a command input from the `input` file. This acts as if the contents of `input` are entered by the user.
 ```bash
 $ sort < names.txt
 abigail
@@ -131,12 +131,13 @@ william
 ```
 
 #### Piping
-Piping is a mechanism that makes it possible to allow commands to be combined or executed. Meaning one command’s output is used as an input for a concurrent command. It is referred to as “piping” as its concept is a process flow being channeled through a pipe from source to destination.
+Piping is a mechanism that makes it possible to allow commands to be combined and executed. Specifically, one command’s output is used as an input for a concurrent command. It is referred to as “piping” as it funnels the output from one command through a "pipe" to another command.
 
 The piping operator is a vertical bar (`|`) to pipe one command to another, separating each command using this operator looks like:
 ```bash
-$ command1 | command2 | command3 
+$ command1 | command2 | command3
 ```
 ```bash
 $ echo "joe joe bob bob jane" | wc -w | grep [0-9]
 ```
+The second example sends the output of the `echo` command ("joe joe bob bob jane") to the `wc` command, which counts the number of words in the string. Then, the output of the `wc` command is sent to the `grep` command, which searches the input for numbers.
