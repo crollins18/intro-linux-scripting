@@ -34,11 +34,11 @@ To write out our complete login message we would once again `echo` but now with 
 $ echo "$msg$USER"
 Welcome and enjoy your time, ccrollin
 ```
-Wow, that is so nice that you can greet each user personally without having to create individual string variables for all the users. The modular nature of string concatenation illustrated makes it a cornerstone tool to generalize your bash scripts. Other more complex operations of concatenation do exist in bash and if you want to explore more [checkout this resource](https://linuxize.com/post/bash-concatenate-strings/#concatenating-strings-with-the--operator).
+Wow, that is so nice that you can greet each user personally without having to create individual string variables for all the users. The modular nature of string concatenation illustrated makes it a cornerstone tool to generalize your bash scripts. Other more complex operations of concatenation do exist in bash and if you want to explore more, [check out this resource](https://linuxize.com/post/bash-concatenate-strings/#concatenating-strings-with-the--operator).
 
 
 ### The Length of a String
-Oftentimes we want to get the length of a string variable in order to influence the logic of our program. In bash there are multiple ways to reference the value of a string variable. For earlier sections of this module, we have used the “`$strvar"` syntax, when we are referencing the value stored inside a string variable. While this syntax suffices for basic operations like reading and concatenating, for other operations like getting the string length we must use a new syntax called expansion syntax. 
+Oftentimes we want to get the length of a string variable in order to influence the logic of our program. In bash there are multiple ways to reference the value of a string variable. In earlier sections of this module, we have used the “`$strvar"` syntax, when we are referencing the value stored inside a string variable. While this syntax suffices for basic operations like reading and concatenating, for other operations like getting the string length we must use a new syntax called expansion syntax. 
 
 Expansion syntax adds curly branches to the outside of the variable name such that the equivalent of `"$strvar"` in expansion syntax would be “`${strvar}"`. It is important to note that expansion syntax can do everything our basic syntax can but is just more fully featured. Now that we know what expansion syntax is, we can use its built-in `#` operator to get the string length such that the command `echo "${#strvar}"` would print a number to the terminal.
 
@@ -129,23 +129,23 @@ The topics you saw in this module are just the tip of the iceberg when it comes 
 
 * [`sed`](https://www.howtogeek.com/666395/how-to-use-the-sed-command-on-linux/) and [`awk`](https://tldp.org/LDP/abs/html/awk.html#AWKREF)
     * <code>sed</code> stands for stream (usually input from the terminal) editor. It uses a basic format syntax to specify what you want to do. <code>sed</code> is most often used when searching for a substring contained inside a base string and when performing substring substitution (find and replace).
-    * <code>awk</code> is a fully featured text manipulation programmable interface that allows you to have conditionals, loops, arrays, and so much more. <code>awk</code> extends the functionality of <code>sed</code> while cleaning up the often messy syntax from <code>sed</code>
+    * <code>awk</code> is a fully featured text manipulation programmable interface that allows you to have conditionals, loops, arrays, and so much more. <code>awk</code> extends the functionality of <code>sed</code> while cleaning up the often messy syntax from <code>sed</code>.
 * [`grep`](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
-    * grep can be used for more advanced substring and pattern matching for an input string or even an input file that contains lots of text
-    * grep allows for the use of [regular expressions](https://www.computerhope.com/jargon/r/regex.htm) to find certain types of text that follows a general structure (like phone numbers, email addresses, or website addresses)
+    * grep can be used for more advanced substring and pattern matching for an input string or even an input file that contains lots of text.
+    * grep allows for the use of [regular expressions](https://www.computerhope.com/jargon/r/regex.htm) to find certain types of text that follows a general structure (like phone numbers, email addresses, or website addresses).
 * [`expand` and `unexpand`](https://linuxjourney.com/lesson/expand-unexpand-command)
-    * to increase readability, it is best to use spaces instead of tab characters in text files (especially for programs)
-    * the <code>expand</code> command will take input and replace the tab characters with spaces
-    * the <code>unexpand</code> command will undo tab expansion (ie. groups of spaces are turned into tab characters)
+    * to increase readability, it is best to use spaces instead of tab characters in text files (especially for programs).
+    * the <code>expand</code> command will take input and replace the tab characters with spaces.
+    * the <code>unexpand</code> command will undo tab expansion (ie. groups of spaces are turned into tab characters).
 * [`sort`](https://linuxjourney.com/lesson/sort-command)
     * Have you ever had a list of names, but wanted to get them alphabetically?
-    * <code>sort</code> will take input from either a file or the terminal and sort each line alphabetically as if each line was an entry in the dictionary
+    * <code>sort</code> will take input from either a file or the terminal and sort each line alphabetically as if each line was an entry in the dictionary.
 * [`translate`](https://linuxjourney.com/lesson/tr-translate-command)
-    * <code>translate</code> will convert one range of values to another parallel range of values
-    * In the example linked above, <code>translate</code> is used to change lowercase letters to uppercase letters. 
+    * <code>translate</code> will convert one range of values to another parallel range of values.
+    * In the example linked above, <code>translate</code> is used to change lowercase letters to uppercase letters.
 * [`uniq`](https://linuxjourney.com/lesson/uniq-unique-command)
-    * Say you wanted to read all the names of students that were in a high school class, but you only want to see one instance of each name (ie. no duplicates)
+    * Say you wanted to read all the names of students that were in a high school class, but you only want to see one instance of each name (ie. no duplicates).
     * <code>uniq</code> will read from a file stored on the computer or terminal input and output only the lines that are unique.
 * [`wc` and `nl`](https://linuxjourney.com/lesson/nl-wc-command)
-    * <code>wc</code> stands for word count and can give you just that for a file or terminal text input
-    * <code>nl</code> stands new lines and will output the number of lines that are in a file or in terminal text input
+    * <code>wc</code> stands for word count and can give you just that for a file or terminal text input.
+    * <code>nl</code> stands new lines and will output the number of lines that are in a file or in terminal text input.
