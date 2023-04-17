@@ -1,4 +1,4 @@
-## Module 1 - Workflow Automation and Productivity
+## Module 1 - Introduction to Bash & Workflow Automation and Productivity
 Written by: Jason Wong
 
 One of the most prominent use cases of bash scripting is the ability to wrap several commands into one script. **After all, command-line bash is the same thing as scripting bash. Virtually anything you can do via the bash terminal can be done in a bash script.** For example, if you are working in Java on the command line, the compile and run commands can be added to a script so the program can be compiled and run in a single command. This module will explain some of `bash`’s basic syntax and cover how to convert a command-line workflow into a script.
