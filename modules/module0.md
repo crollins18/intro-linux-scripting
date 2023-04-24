@@ -9,8 +9,8 @@ Links to the full Linux manual pages are available for each basic command. These
 #### `echo` - [display text or variable to terminal](https://linux.die.net/man/1/echo)
 ###### Syntax - `echo [options] <text|variable>`
 ```bash
-$ echo "Hello world!!"
-Hello world!!
+$ echo "Hello world"
+Hello world
 ```
 
 #### <code>ls</code> - [lists directory contents](https://linux.die.net/man/1/ls)
