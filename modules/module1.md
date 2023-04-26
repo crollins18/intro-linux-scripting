@@ -66,7 +66,7 @@ cd “$HOME/Downloads”
 echo “cd resulted in $? (0 for success, 1 for failure)”
 ```
 
-This script simply prints out the script’s name and arguments before switching directories to the user’s downloads directory. Then, it reports if it was successful in switching directories. For now, don’t worry about the specifics of how we combine the variables with other text as this will be explored later in Module 3 - Concatenating Strings.
+This script simply prints out the script’s name and arguments before switching directories to the user’s downloads directory. Then, it reports if it was successful in switching directories. For now, don’t worry about the specifics of how we combine the variables with other text as this will be explored later.
 
 For curious learners, a longer list of operations that can be performed on variables can be found on a tutorial site [here](https://ryanstutorials.net/bash-scripting-tutorial/bash-variables.php).
 
