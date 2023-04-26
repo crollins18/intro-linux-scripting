@@ -47,7 +47,7 @@ Like any good programming or scripting language, bash supports the use of variab
 val=1000
 ```
 
-However, the way that the value is retrieved may look a bit strange, as the variable name is preceded by a `$` sign to indicate to the interpreter that we are reading the variable. For example, `$val `retrieves the value stored in the variable `val`. Variables can be used in commands, like `echo "$val"` (we will explore this more in Module 3).
+However, the way that the value is retrieved may look a bit strange, as the variable name is preceded by a `$` sign to indicate to the interpreter that we are reading the variable. For example, `$val `retrieves the value stored in the variable `val`. Variables can be used in commands, like `echo "$val"`.
 
 There are also some special variables that can be used in a bash script. The most useful ones are as follows:
 
